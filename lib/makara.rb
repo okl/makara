@@ -45,5 +45,3 @@ module Makara
 
   end
 end
-
-require 'active_record/connection_adapters/makara_adapter'

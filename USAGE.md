@@ -7,13 +7,12 @@ Makara is designed to be configured solely via your `database.yml`. This means t
 The minimal `database.yml` you'll need to get things running looks like (optional defaults exposed):
 
     production:
-      adapter: makara
+      adapter: makara_mysql2
       sticky_master: true         // optional
       sticky_slaves: true         // optional
       blacklist_duration: 60      // optional
       verbose: false              // optional
 
-      db_adapter: mysql2
       database: my_project_db
       username: root
       password: 
@@ -31,11 +30,10 @@ To define a slave database, provide another database with either the role remove
           role: master
         - name: slave 1
 
-By default the databases will inherit the top-level db configuration. The best practice is to put the shared options in the top-level and define all the differences in each sub-config. In the example below, the `db_adapter`, `username`, and `password` options will be shared among all the sub-configs.
+By default the databases will inherit the top-level db configuration. The best practice is to put the shared options in the top-level and define all the differences in each sub-config. In the example below, the `username` and `password` options will be shared among all the sub-configs.
 
     production:
-      adapter: makara
-      db_adapter: mysql2
+      adapter: makara_mysql2
       username: the-user
       password: the-password
 

@@ -31,9 +31,8 @@ Add makara to your gemfile:
       sticky_slave: true
       sticky_master: true
 
-      adapter: makara
+      adapter: makara_mysql2
       
-      db_adapter: mysql2
       host: xxx
       user: xxx
       password: xxx

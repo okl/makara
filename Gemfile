@@ -4,5 +4,6 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'rails', '3.1.8'
+gem 'mysql2'
 gem 'rspec'
 gem 'delorean'
