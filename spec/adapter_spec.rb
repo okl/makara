@@ -46,6 +46,7 @@ describe ActiveRecord::ConnectionAdapters::MakaraAdapter do
     let(:config){ simple_config.merge(:adapter => 'makara_mysql2') }
 
     it 'should invoke the makara connection with the appropriate db_adapter' do
+      require 'mysql2'
       require 'active_record/connection_adapters/mysql2_adapter'
 
       abstract_master = Makara::ConfigParser.master_config(config)
